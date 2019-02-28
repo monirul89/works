@@ -366,8 +366,9 @@ button.w3view-cart {
 /*-- banner --*/
 .ban-top {
     border: 1px solid rgba(0, 0, 0, 0.22);
-    margin: 0 10px 10px 10px;
     border-radius: 4px;
+    border-left: navajowhite;
+    border-right: navajowhite;
 }
 .dropdown-menu.columns-3 {
     min-width:673px;
