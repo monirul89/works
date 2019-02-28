@@ -85,7 +85,7 @@ get_header();
 </div>
 <!-- //banner -->
 
-<div>
+<div class="ads-grid">
     <?php
     // Show the selected front page content.
     if (have_posts()) :
