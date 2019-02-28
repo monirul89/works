@@ -369,6 +369,8 @@ button.w3view-cart {
     border-radius: 4px;
     border-left: navajowhite;
     border-right: navajowhite;
+    margin-bottom: 10px;
+    box-shadow: -1px 2px 5px #dddccc;
 }
 .dropdown-menu.columns-3 {
     min-width:673px;
