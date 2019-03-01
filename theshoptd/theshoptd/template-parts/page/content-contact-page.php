@@ -72,7 +72,7 @@
                             <i class="fa fa-fax"></i> FAX : +1 888 888 4444</p>
                         <p>
                             <i class="fa fa-envelope-o"></i> Email :
-                            <a href="mailto:monirul89@mail.com">mail@example.com</a>
+                            <a href="mailto:monirul89@mail.com">monirul89@mail.com</a>
                         </p>
                     </div>
                     <div class="col-xs-5 contact-agile">
@@ -86,29 +86,7 @@
     </div>
 </div>
 <!-- map -->
-<div class="map w3layouts">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55565170.29301636!2d-132.08532758867793!3d31.786060306224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sin!4v1512365940398"
-            allowfullscreen></iframe>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.636383497602!2d90.41747113210259!3d23.760342682295008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b87921aa02f7%3A0x8544f7c649684f07!2sRampura+Bazaar+Bus+Stop!5e0!3m2!1sen!2sbd!4v1551462833316" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 <!-- //map -->
-<!-- newsletter -->
-<div class="footer-top">
-    <div class="container-fluid">
-        <div class="col-xs-8 agile-leftmk">
-            <h2>Get your Groceries delivered from local stores</h2>
-            <p>Free Delivery on your first order!</p>
-            <form action="#" method="post">
-                <input type="email" placeholder="E-mail" name="email" required="">
-                <input type="submit" value="Subscribe">
-            </form>
-            <div class="newsform-w3l">
-                <span class="fa fa-envelope-o" aria-hidden="true"></span>
-            </div>
-        </div>
-        <div class="col-xs-4 w3l-rightmk">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/images/tab3.png" alt=" ">
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!-- //newsletter -->
