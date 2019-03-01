@@ -8,7 +8,6 @@
  * @version 1.0
  */
 ?>
-
 <!-- banner-2 -->
 <div class="page-head_agile_info_w3l">
 
