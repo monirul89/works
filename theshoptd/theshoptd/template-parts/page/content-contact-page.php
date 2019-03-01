@@ -76,7 +76,7 @@
                         </p>
                     </div>
                     <div class="col-xs-5 contact-agile">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo get_template_directory_uri(); ?>/assets/images/contact2.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/contact2.jpg" alt="">
                     </div>
                     <div class="clearfix"> </div>
                 </div>
@@ -87,6 +87,6 @@
 </div>
 <!-- map -->
 <div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.636383497602!2d90.41747113210259!3d23.760342682295008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b87921aa02f7%3A0x8544f7c649684f07!2sRampura+Bazaar+Bus+Stop!5e0!3m2!1sen!2sbd!4v1551462833316" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.646490982643!2d90.41815241324967!3d23.759982430945787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b87921aa02f7%3A0x8544f7c649684f07!2sRampura+Bazaar+Bus+Stop!5e0!3m2!1sen!2sbd!4v1551466988308" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 <!-- //map -->

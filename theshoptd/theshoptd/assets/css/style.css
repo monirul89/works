@@ -2761,7 +2761,7 @@ input[type="radio"], input[type="checkbox"] {
         display: inline-block;
     }
     .logo_agile h1 a img {
-        width: 20%;
+        width: 80%;
     }
     .navbar-nav > li > a {
         padding: 15px 7px;
@@ -3007,7 +3007,7 @@ input[type="radio"], input[type="checkbox"] {
         margin-top: 0;
     }
     .logo_agile h1 a img {
-        width: 24%;
+        width: 50%;
     }
     .header {
         margin-top: 8px;
@@ -3447,7 +3447,7 @@ input[type="radio"], input[type="checkbox"] {
         width: 100%;
     }
     .logo_agile h1 a img {
-        width: 22%;
+        width: 60%;
     }
     .header ul li {
         font-size: 12px;
@@ -3604,7 +3604,7 @@ input[type="radio"], input[type="checkbox"] {
         font-size: 31px;
     }
     .logo_agile h1 a img {
-        width: 20%;
+        width: 50%;
     }
     .header {
         margin-top: 2px;
