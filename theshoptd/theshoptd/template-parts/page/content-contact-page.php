@@ -72,7 +72,7 @@
                             <i class="fa fa-fax"></i> FAX : +1 888 888 4444</p>
                         <p>
                             <i class="fa fa-envelope-o"></i> Email :
-                            <a href="mailto:example@mail.com">mail@example.com</a>
+                            <a href="mailto:monirul89@mail.com">mail@example.com</a>
                         </p>
                     </div>
                     <div class="col-xs-5 contact-agile">

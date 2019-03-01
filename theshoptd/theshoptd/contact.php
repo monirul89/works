@@ -24,7 +24,7 @@ get_header();
     if (have_posts()) :
         while (have_posts()) :
             the_post();
-            get_template_part('template-parts/page/content', 'Contact-page');
+            get_template_part('template-parts/page/content', 'contact-page');
         endwhile;
     else :
         get_template_part('template-parts/post/content', 'none');
