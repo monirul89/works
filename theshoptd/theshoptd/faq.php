@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Contact Page
+ * Template Name: Faq Page
  * 
  * The front page template file
  * If the user has selected a static page for their homepage, this is what will
