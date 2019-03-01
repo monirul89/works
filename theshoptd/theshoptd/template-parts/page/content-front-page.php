@@ -195,7 +195,7 @@
             <h3 class="agileits-sear-head">Special Deals</h3>
             <div class="special-sec1">
                 <div class="col-xs-4 img-deals">
-                    <img src="images/d2.jpg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/d2.jpg" alt="">
                 </div>
                 <div class="col-xs-8 img-deal1">
                     <h3>Lay's Potato Chips</h3>
@@ -205,7 +205,7 @@
             </div>
             <div class="special-sec1">
                 <div class="col-xs-4 img-deals">
-                    <img src="images/d1.jpg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/d1.jpg" alt="">
                 </div>
                 <div class="col-xs-8 img-deal1">
                     <h3>Bingo Mad Angles</h3>
@@ -215,7 +215,7 @@
             </div>
             <div class="special-sec1">
                 <div class="col-xs-4 img-deals">
-                    <img src="images/d4.jpg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/d4.jpg" alt="">
                 </div>
                 <div class="col-xs-8 img-deal1">
                     <h3>Tata Salt</h3>
@@ -225,7 +225,7 @@
             </div>
             <div class="special-sec1">
                 <div class="col-xs-4 img-deals">
-                    <img src="images/d5.jpg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/d5.jpg" alt="">
                 </div>
                 <div class="col-xs-8 img-deal1">
                     <h3>Gujarat Dry Fruit</h3>
@@ -235,7 +235,7 @@
             </div>
             <div class="special-sec1">
                 <div class="col-xs-4 img-deals">
-                    <img src="images/d3.jpg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/d3.jpg" alt="">
                 </div>
                 <div class="col-xs-8 img-deal1">
                     <h3>Cadbury Dairy Milk</h3>
@@ -256,7 +256,7 @@
                 <div class="col-md-4 product-men">
                     <div class="men-pro-item simpleCart_shelfItem">
                         <div class="men-thumb-item">
-                            <img src="images/m1.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/m1.jpg" alt="">
                             <div class="men-cart-pro">
                                 <div class="inner-men-cart-pro">
                                     <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -295,7 +295,7 @@
                 <div class="col-md-4 product-men">
                     <div class="men-pro-item simpleCart_shelfItem">
                         <div class="men-thumb-item">
-                            <img src="images/m2.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/m2.jpg" alt="">
                             <div class="men-cart-pro">
                                 <div class="inner-men-cart-pro">
                                     <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -335,7 +335,7 @@
                 <div class="col-md-4 product-men">
                     <div class="men-pro-item simpleCart_shelfItem">
                         <div class="men-thumb-item">
-                            <img src="images/m3.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/m3.jpg" alt="">
                             <div class="men-cart-pro">
                                 <div class="inner-men-cart-pro">
                                     <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -384,7 +384,7 @@
                 </div>
                 <h3 class="w3l-nut-middle">Nuts & Dry Fruits</h3>
                 <div class="col-xs-5 bg-right-nut">
-                    <img src="images/nut1.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/nut1.png" alt="">
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -395,7 +395,7 @@
                 <div class="col-md-4 product-men">
                     <div class="men-pro-item simpleCart_shelfItem">
                         <div class="men-thumb-item">
-                            <img src="images/mk4.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mk4.jpg" alt="">
                             <div class="men-cart-pro">
                                 <div class="inner-men-cart-pro">
                                     <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -434,7 +434,7 @@
                 <div class="col-md-4 product-men">
                     <div class="men-pro-item simpleCart_shelfItem">
                         <div class="men-thumb-item">
-                            <img src="images/mk5.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mk5.jpg" alt="">
                             <div class="men-cart-pro">
                                 <div class="inner-men-cart-pro">
                                     <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -474,7 +474,7 @@
                 <div class="col-md-4 product-men">
                     <div class="men-pro-item simpleCart_shelfItem">
                         <div class="men-thumb-item">
-                            <img src="images/mk6.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mk6.jpg" alt="">
                             <div class="men-cart-pro">
                                 <div class="inner-men-cart-pro">
                                     <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -520,7 +520,7 @@
                 <div class="col-md-4 product-men">
                     <div class="men-pro-item simpleCart_shelfItem">
                         <div class="men-thumb-item">
-                            <img src="images/mk7.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mk7.jpg" alt="">
                             <div class="men-cart-pro">
                                 <div class="inner-men-cart-pro">
                                     <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -558,7 +558,7 @@
                 <div class="col-md-4 product-men">
                     <div class="men-pro-item simpleCart_shelfItem">
                         <div class="men-thumb-item">
-                            <img src="images/mk8.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mk8.jpg" alt="">
                             <div class="men-cart-pro">
                                 <div class="inner-men-cart-pro">
                                     <a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -598,7 +598,7 @@
                 <div class="col-md-4 product-men">
                     <div class="men-pro-item simpleCart_shelfItem">
                         <div class="men-thumb-item">
-                            <img src="images/mk9.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mk9.jpg" alt="">
                             <div class="men-cart-pro">
                                 <div class="inner-men-cart-pro">
                                     <a href="single.html" class="link-product-add-cart">Quick View</a>
