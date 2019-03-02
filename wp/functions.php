@@ -5,4 +5,5 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+add_theme_support();
+get_theme_support();
