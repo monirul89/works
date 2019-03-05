@@ -1,5 +1,5 @@
 <!-- product left -->
-<div class="side-bar col-md-3">
+<div class="">
     <div class="search-hotel">
         <h3 class="agileits-sear-head">Search Here..</h3>
         <form action="#" method="post">
@@ -225,4 +225,3 @@
     </div>
     <!-- //deals -->
 </div>
-<!-- //product left -->

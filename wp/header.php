@@ -4,8 +4,6 @@
 
     <head>
         <meta charset="<?php bloginfo('charset'); ?>" />
-        <title><?php bloginfo('name'); ?> || <?php the_title(); ?></title>
-        
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="Grocery Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -19,18 +17,8 @@
                 window.scrollTo(0, 1);
             }
         </script>
-        <!--//tags -->
-        <link href="<?php echo get_template_directory_uri(); ?>/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="<?php echo get_template_directory_uri(); ?>/assets/css/font-awesome.css" rel="stylesheet">
-        <!--pop-up-box-->
-        <link href="<?php echo get_template_directory_uri(); ?>/assets/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-        <!--//pop-up-box-->
-        <!-- price range -->
-        <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/jquery-ui1.css">
         <!-- fonts -->
-        <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
-        
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet" />
         <?php wp_head(); ?>
         
     </head>
