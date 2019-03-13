@@ -14,8 +14,11 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
+<section>    
+	<div class="site-section">        
+		<div class="container">            
+			<div class="row">                
+				<div class="col-md-12 col-sm-12 col-xs-12">
 
 		<?php
 		// Show the selected front page content.
@@ -51,9 +54,10 @@ get_header(); ?>
 
 	endif; // The if ( 0 !== radixetcltd_panel_count() ) ends here.
 		?>
-
-	</main><!-- #main -->
-</div><!-- #primary -->
-
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 <?php
 get_footer();
