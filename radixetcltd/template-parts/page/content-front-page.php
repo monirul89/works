@@ -33,16 +33,18 @@
 				<?php radixetcltd_edit_link( get_the_ID() ); ?>
 
 			</header><!-- .entry-header -->
-
+			
+			<?php // putRevSlider( 'Main slider' ); ?>
+			
 			<div class="entry-content">
 				<?php
-					/* translators: %s: Name of current post */
+					/* translators: %s: Name of current post
 					the_content(
 						sprintf(
 							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'radixetcltd' ),
 							get_the_title()
 						)
-					);
+					); */
 					?>
 			</div><!-- .entry-content -->
 

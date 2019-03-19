@@ -80,17 +80,14 @@
                     <div class="row navbar-container">
                         <div id="plumber-nav" class="collapse navbar-collapse">
 						
-						<?php if(has_nav_menu( 'primary' )){ ?>
-			
-							<ul class="nav navbar-nav">
-								<li class="active"><a href="#">Home</a></li>
-								<li><a href="#">About us</a></li>
-								<li><a href="#">Products</a></li>
-								<li class="dropdown"><a href="#">Mineral Water Plant</a></li>
-								<li class="dropdown"><a href="#">Industrial Plant</a></li>
-								<li><a href="#">Contact</a></li>
-							</ul>
-			
+						<?php if(has_nav_menu( 'primary' )){ ?>			
+								<?php 
+								wp_nav_menu( array(
+								'menu_class'        => "nav navbar-nav",
+								'container'         => false,
+								'theme_location' => 'primary' 
+								) );
+								?>
 							<?php } else { ?>
 						
                             <ul class="nav navbar-nav">
