@@ -72,6 +72,10 @@
                 </div>
             </div>
         </header>
+		
+		<?php if(has_nav_menu( 'primary' )){ ?>
+			<h3>menu</h3>
+		<?php else { ?>
         <div class="porltv navhere">
             <nav class="navbar navbar-default plumber-navbar">
                 <div class="container">
@@ -80,6 +84,7 @@
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="#">Home</a></li>
                                 <li><a href="#">About us</a></li>
+								<li><a href="#">Products</a></li>
                                 <li class="dropdown"><a href="#">Mineral Water Plant</a>
                                     <ul class="dropdown-menu services">
                                         <li><a href="#">Mineral Water Plant</a></li>
@@ -111,5 +116,7 @@
                 </div>
             </nav>
         </div>
-        
+       
+		<?php } ?>
+		
        
