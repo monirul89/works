@@ -60,7 +60,7 @@ function radixetcltd_setup() {
     // This theme uses wp_nav_menu() in two locations.
     register_nav_menus(
             array(
-                'top' => __('Top Menu', 'radixetcltd'),
+                'primary' => __('Primary Menu', 'radixetcltd'),
                 'social' => __('Social Links Menu', 'radixetcltd'),
             )
     );

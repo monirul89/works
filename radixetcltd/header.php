@@ -50,7 +50,7 @@
                                 <div class="media-left"><span><img src="http://www.watertreat.in/assets/images/icons/1.png" alt="" title=""></span></div>
                                 <div class="media-body">
                                     <h5 class="this-subtitle">email us</h5>
-                                    <h5 class="this-title">admin@excelfiltration.in</h5>
+                                    <h5 class="this-title">monirul89@gmail.com</h5>
                                 </div>
                             </div>
                         </li>
@@ -59,7 +59,7 @@
                                 <div class="media-left"><span><img src="http://www.watertreat.in/assets/images/icons/2.png" alt="+91 92 2720 8234" title="+91 92 2720 8234"></span></div>
                                 <div class="media-body">
                                     <h5 class="this-subtitle">call us now</h5>
-                                    <h3 class="this-title">+91 92 2720 8234</h3>
+                                    <h3 class="this-title">+8801915047779</h3>
                                 </div>
                             </div>
                         </li>
@@ -73,14 +73,26 @@
             </div>
         </header>
 		
-		<?php if(has_nav_menu( 'primary' )){ ?>
-			<h3>menu</h3>
-		<?php else { ?>
+		
         <div class="porltv navhere">
             <nav class="navbar navbar-default plumber-navbar">
                 <div class="container">
                     <div class="row navbar-container">
                         <div id="plumber-nav" class="collapse navbar-collapse">
+						
+						<?php if(has_nav_menu( 'primary' )){ ?>
+			
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="#">Home</a></li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Products</a></li>
+								<li class="dropdown"><a href="#">Mineral Water Plant</a></li>
+								<li class="dropdown"><a href="#">Industrial Plant</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+			
+							<?php } else { ?>
+						
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="#">Home</a></li>
                                 <li><a href="#">About us</a></li>
@@ -103,6 +115,9 @@
                                 </li>
                                 <li><a href="#">Contact</a></li>
                             </ul>
+							
+							<?php } ?>
+								
                             <a href="javascript: void(0);" data-toggle="modal" data-target="#myModal2" class="get-appointment-btn"><span>Registration</span></a>
                             <a href="javascript: void(0);" data-toggle="modal" data-target="#myModalReg" class="get-appointment-btn"><span>Login</span></a>
                             <ul class="nav nav-pills header-social">
@@ -117,6 +132,6 @@
             </nav>
         </div>
        
-		<?php } ?>
+	
 		
        
