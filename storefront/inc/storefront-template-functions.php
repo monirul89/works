@@ -245,7 +245,9 @@ if (!function_exists('storefront_primary_navigation')) {
             wp_nav_menu(
                     array(
                         'theme_location' => 'primary',
-                        'container_class' => 'primary-navigation',
+                        'menu_class' => "nav navbar-nav",
+//                        'container' => false,
+                        'container_class' => 'primary-navigation nav navbar-nav',
                     )
             );
 
