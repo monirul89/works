@@ -1,26 +1,14 @@
-/**
- * File skip-link-focus-fix.js.
- *
- * Helps with accessibility for keyboard only users.
- *
- * Learn more: https://git.io/vWdr2
- */
-(function() {
-	var isIe = /(trident|msie)/i.test( navigator.userAgent );
+( function() {
+	var is_webkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
+	    is_opera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
+	    is_ie     = navigator.userAgent.toLowerCase().indexOf( 'msie' )   > -1;
 
-	if ( isIe && document.getElementById && window.addEventListener ) {
+	if ( ( is_webkit || is_opera || is_ie ) && document.getElementById && window.addEventListener ) {
 		window.addEventListener( 'hashchange', function() {
-			var id = location.hash.substring( 1 ),
-				element;
-
-			if ( ! ( /^[A-z0-9_-]+$/.test( id ) ) ) {
-				return;
-			}
-
-			element = document.getElementById( id );
+			var element = document.getElementById( location.hash.substring( 1 ) );
 
 			if ( element ) {
-				if ( ! ( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
+				if ( ! /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) {
 					element.tabIndex = -1;
 				}
 

@@ -1,89 +1,81 @@
 <?php
 /**
- * The template for displaying comments
+ * The template for displaying comments.
  *
- * This is the template that displays the area of the page that contains both the current comments
+ * The area of the page that contains both current comments
  * and the comment form.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package WordPress
- * @subpackage Radixetcltd
- * @since 1.0
- * @version 1.0
+ * @package radixetcltd
  */
-
 /*
  * If the current post is protected by a password and
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-if ( post_password_required() ) {
-	return;
+if (post_password_required()) {
+    return;
 }
 ?>
 
-<div id="comments" class="comments-area">
+<section id="comments" class="comments-area" aria-label="<?php esc_html_e('Post Comments', 'radixetcltd'); ?>">
 
-	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-		?>
-		<h2 class="comments-title">
-			<?php
-			$comments_number = get_comments_number();
-			if ( '1' === $comments_number ) {
-				/* translators: %s: post title */
-				printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'radixetcltd' ), get_the_title() );
-			} else {
-				printf(
-					/* translators: 1: number of comments, 2: post title */
-					_nx(
-						'%1$s Reply to &ldquo;%2$s&rdquo;',
-						'%1$s Replies to &ldquo;%2$s&rdquo;',
-						$comments_number,
-						'comments title',
-						'radixetcltd'
-					),
-					number_format_i18n( $comments_number ),
-					get_the_title()
-				);
-			}
-			?>
-		</h2>
+    <?php
+    if (have_comments()) :
+        ?>
+        <h2 class="comments-title">
+            <?php
+            printf(// WPCS: XSS OK.
+                    /* translators: 1: number of comments, 2: post title */
+                    esc_html(_nx('%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'radixetcltd')), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>'
+            );
+            ?>
+        </h2>
 
-		<ol class="comment-list">
-			<?php
-				wp_list_comments(
-					array(
-						'avatar_size' => 100,
-						'style'       => 'ol',
-						'short_ping'  => true,
-						'reply_text'  => radixetcltd_get_svg( array( 'icon' => 'mail-reply' ) ) . __( 'Reply', 'radixetcltd' ),
-					)
-				);
-			?>
-		</ol>
+        <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : // Are there comments to navigate through. ?>
+            <nav id="comment-nav-above" class="comment-navigation" role="navigation" aria-label="<?php esc_html_e('Comment Navigation Above', 'radixetcltd'); ?>">
+                <span class="screen-reader-text"><?php esc_html_e('Comment navigation', 'radixetcltd'); ?></span>
+                <div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments', 'radixetcltd')); ?></div>
+                <div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'radixetcltd')); ?></div>
+            </nav><!-- #comment-nav-above -->
+        <?php endif; // Check for comment navigation.  ?>
 
-		<?php
-		the_comments_pagination(
-			array(
-				'prev_text' => radixetcltd_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous', 'radixetcltd' ) . '</span>',
-				'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'radixetcltd' ) . '</span>' . radixetcltd_get_svg( array( 'icon' => 'arrow-right' ) ),
-			)
-		);
+        <ol class="comment-list">
+            <?php
+            wp_list_comments(
+                    array(
+                        'style' => 'ol',
+                        'short_ping' => true,
+                        'callback' => 'radixetcltd_comment',
+                    )
+            );
+            ?>
+        </ol><!-- .comment-list -->
 
-	endif; // Check for have_comments().
+        <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : // Are there comments to navigate through. ?>
+            <nav id="comment-nav-below" class="comment-navigation" role="navigation" aria-label="<?php esc_html_e('Comment Navigation Below', 'radixetcltd'); ?>">
+                <span class="screen-reader-text"><?php esc_html_e('Comment navigation', 'radixetcltd'); ?></span>
+                <div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments', 'radixetcltd')); ?></div>
+                <div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'radixetcltd')); ?></div>
+            </nav><!-- #comment-nav-below -->
+            <?php
+        endif; // Check for comment navigation.
 
-	// If comments are closed and there are comments, let's leave a little note, shall we?
-	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-		?>
+    endif;
 
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'radixetcltd' ); ?></p>
-		<?php
-	endif;
+    if (!comments_open() && 0 !== intval(get_comments_number()) && post_type_supports(get_post_type(), 'comments')) :
+        ?>
+        <p class="no-comments"><?php esc_html_e('Comments are closed.', 'radixetcltd'); ?></p>
+        <?php
+    endif;
 
-	comment_form();
-	?>
+    $args = apply_filters(
+            'radixetcltd_comment_form_args', array(
+        'title_reply_before' => '<span id="reply-title" class="gamma comment-reply-title">',
+        'title_reply_after' => '</span>',
+            )
+    );
 
-</div><!-- #comments -->
+    comment_form($args);
+    ?>
+
+</section><!-- #comments -->
