@@ -7,6 +7,8 @@ class Admin extends CI_Controller{
     }
     
     public function admin_login_check(){
-        $this->load->view('admin/admin_master');
+        $data= array();
+        $data['admincontent']= $this->load->view('admin/admin_content', '', TRUE);
+        $this->load->view('admin/admin_master', $data);
     }
 }
