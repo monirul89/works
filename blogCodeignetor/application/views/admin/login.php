@@ -52,19 +52,31 @@
                 <div class="row">
                     <div class="well col-md-4 center login-box" style="padding: 40px 40px 30px 40px;">
                         <div class="alert alert-info">
-                            Please login with your Username and Password.
+                            <h4 style="margin: 0">Admin Login</h4>
+                            <?php
+                            $exc = $this->session->userdata('exception');
+                            if ($exc) {
+                                ?>
+
+                                <p style="color: red">
+                                    <?php
+                                    echo $exc;
+                                    $this->session->unset_userdata('exception');
+                                    ?>
+                                </p>
+                            <?php } ?>
                         </div>
                         <form class="form-horizontal" action="<?php echo base_url(); ?>admin/admin_login_check" method="post">
                             <fieldset>
                                 <div class="input-group input-group-lg">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user red"></i></span>
-                                    <input type="text" class="form-control" placeholder="Username">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope red"></i></span>
+                                    <input name="admin_email_address" type="email" class="form-control" placeholder="Admin Email Address">
                                 </div>
                                 <div class="clearfix"></div><br>
 
                                 <div class="input-group input-group-lg">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock red"></i></span>
-                                    <input type="password" class="form-control" placeholder="Password">
+                                    <input name="admin_password" type="password" class="form-control" placeholder="Admin Password">
                                 </div>
                                 <div class="clearfix"></div>
 

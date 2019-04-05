@@ -190,7 +190,7 @@
                 </noscript>
 
                 <div id="content" class="col-lg-10 col-sm-10">
-                     <?php echo $admincontent; ?>
+                     <?php echo $admin_main_content; ?>
                 </div><!--/#content.col-md-0-->
             </div><!--/fluid-row-->
 
