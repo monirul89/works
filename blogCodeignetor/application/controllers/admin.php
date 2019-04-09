@@ -20,8 +20,10 @@ class Admin extends CI_Controller {
 
         if ($admin_login_check_result) {
             $data = array();
-            $data['admin_main_content'] = $this->load->view('admin/dashboard', '', TRUE);
-            $this->load->view('admin/admin_master', $data);
+            $sdata['admin_full_name']=$admin_login_check_result->admin_full_name;
+            $sdata['admin_id']=$admin_login_check_result->admin_id;
+            $this->session->set_userdata($setData);
+            redirect('supper_admin');
         } else {
             $setData ['exception']= 'Your UserID Or Password Invalid !!'; 
             $this->session->set_userdata($setData);
