@@ -11,16 +11,15 @@
  * @since 1.0
  * @version 1.0
  */
-
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
+    <head>
+        <meta charset="<?php bloginfo('charset'); ?>">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         <script async="" src="https://www.google-analytics.com/analytics.js"></script>
-        
+
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
@@ -111,7 +110,7 @@
                 </div>
             </nav>
         </div>
-        
-       <div class="">
-			<?php include 'slider.php'; ?>
-		</div>
+
+        <div class="">
+            <?php include 'slider.php'; ?>
+        </div>
