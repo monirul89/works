@@ -52,7 +52,8 @@
         <?php if ((get_theme_mod('solon_full_content') == 1) && is_home()) : ?>
             <?php the_content(); ?>
         <?php else : ?>
-            <?php the_excerpt(); ?>
+            <?php the_excerpt(17); ?>
+        <?php echo '<a class="read-more" href="'.get_permalink($post->ID).'"><em>More...</em></a>'; ?>
         <?php endif; ?>
         <span class="read-more">
             <span class="read-more-icon"><a href="<?php the_permalink(); ?>"><i class="fa fa-plus"></i></a></span>

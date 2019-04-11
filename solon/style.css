@@ -988,6 +988,13 @@ a:hover, a:focus{
     width: 670px;
     float: left;
 }
+.clearfix {
+    clear: both;
+    overflow: hidden;
+}
+.readmore{
+    float: left;
+}
 .widget-area {
     width: 340px;
     float: right;
