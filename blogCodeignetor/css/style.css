@@ -503,3 +503,13 @@ ol li .send {
 a {
 	outline:none;
 }
+.register_gender{
+    text-align: left;
+    line-height: 60px;
+    font-size: 16px;
+    color:#4b0082;
+}
+.register_gender_lebel{
+    padding-right: 5px;
+    font-weight: bold;
+}
