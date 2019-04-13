@@ -1,14 +1,20 @@
 <?php
 /**
- * The sidebar containing the main widget area.
+ * The sidebar containing the main widget area
  *
- * @package radixetcltd
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package WordPress
+ * @subpackage Radixetcltd
+ * @since 1.0
+ * @version 1.0
  */
-if (!is_active_sidebar('sidebar-1')) {
-    return;
+
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	return;
 }
 ?>
 
-<div id="secondary" class="widget-area" role="complementary">
-    <?php dynamic_sidebar('sidebar-1'); ?>
-</div><!-- #secondary -->
+<aside id="secondary" class="widget-area" role="complementary" aria-label="<?php esc_attr_e( 'Blog Sidebar', 'radixetcltd' ); ?>">
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+</aside><!-- #secondary -->
