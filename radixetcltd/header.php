@@ -16,7 +16,7 @@
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta charset="UTF-8">
-        <title> <?php the_title();?> | Readixetc </title>
+        <title> <?php the_title(); ?> | Readixetc </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         <script async="" src="https://www.google-analytics.com/analytics.js"></script>
@@ -43,7 +43,8 @@
         </script>
         <header class="row main-header">
             <div class="row this-inner">
-                <div class="container"><a href="" class="main-logo"><img src="http://www.watertreat.in/assets/images/logo.png" title="Excel Filtration Pvt. Ltd." alt="Excel Filtration Pvt. Ltd."></a>
+                <div class="container">
+                    <a href="" class="main-logo"><img src="http://www.watertreat.in/assets/images/logo.png" title="Excel Filtration Pvt. Ltd." alt="Excel Filtration Pvt. Ltd."></a>
                     <ul class="nav nav-pills header-contacts hidden-sm hidden-xs">
                         <li>
                             <div class="media">
@@ -77,6 +78,8 @@
                 <div class="container">
                     <div class="row navbar-container">
                         <div id="plumber-nav" class="collapse navbar-collapse">
+
+                            <!--                            
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="#">Home</a></li>
                                 <li><a href="#">About us</a></li>
@@ -97,7 +100,28 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">Contact</a></li>
-                            </ul>
+                            </ul>-->
+
+                            <?php if (has_nav_menu('main-menu')):
+                                wp_nav_menu(array(
+                                    'theme_location' => 'main-menu',
+                                    'container' => false,
+                                    'menu_id' => 'menu',
+                                    'menu_class' => 'nav navbar-nav'
+                                ));
+                                ?>
+                                <!-- .main-navigation -->
+
+                            <?php else: ?>
+
+                                <ul id="menu">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                </ul>
+
+                            <?php endif; ?>
+                                
                             <a href="javascript: void(0);" data-toggle="modal" data-target="#myModal2" class="get-appointment-btn"><span>Registration</span></a>
                             <a href="javascript: void(0);" data-toggle="modal" data-target="#myModalReg" class="get-appointment-btn"><span>Login</span></a>
                             <ul class="nav nav-pills header-social">
@@ -112,6 +136,6 @@
             </nav>
         </div>
 
-<!--        <div class="">
-            <?php // include 'slider.php'; ?>
-        </div>-->
+        <!--        <div class="">
+        <?php // include 'slider.php';  ?>
+                </div>-->

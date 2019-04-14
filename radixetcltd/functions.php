@@ -51,7 +51,7 @@ function radixetcltd_setup() {
     add_theme_support('post-thumbnails');
 
     add_image_size('radixetcltd-featured-image', 2000, 1200, true);
-
+    add_image_size('radixetcltd-image', 350, 350, true);
     add_image_size('radixetcltd-thumbnail-avatar', 100, 100, true);
 
     // Set the default content width.
@@ -60,8 +60,8 @@ function radixetcltd_setup() {
     // This theme uses wp_nav_menu() in two locations.
     register_nav_menus(
             array(
-                'top' => __('Top Menu', 'radixetcltd'),
-                'social' => __('Social Links Menu', 'radixetcltd'),
+                'main-menu' => __('Top Menu', 'radixetcltd'),
+                'social-menu' => __('Social Links Menu', 'radixetcltd'),
             )
     );
 
@@ -452,7 +452,7 @@ function radixetcltd_scripts() {
 
     // Theme stylesheet.
     wp_enqueue_style('radixetcltd-style', get_stylesheet_uri());
-    
+
     // Load the dark colorscheme.
     if ('dark' === get_theme_mod('colorscheme', 'light') || is_customize_preview()) {
         wp_enqueue_style('radixetcltd-colors-dark', get_theme_file_uri('/assets/css/colors-dark.css'), array('radixetcltd-style'), '1.0');
@@ -680,3 +680,15 @@ require get_parent_theme_file_path('/inc/customizer.php');
  */
 require get_parent_theme_file_path('/inc/icon-functions.php');
 require 'inc/custom_post.php';
+
+function wpdocs_excerpt_more($more) {
+    return '<a href="' . get_the_permalink() . '" rel="nofollow" class="readMore"> Read More...</a>';
+}
+
+add_filter('excerpt_more', 'wpdocs_excerpt_more');
+
+function tn_custom_excerpt_length($length) {
+    return 10;
+}
+
+add_filter('excerpt_length', 'tn_custom_excerpt_length', 999);

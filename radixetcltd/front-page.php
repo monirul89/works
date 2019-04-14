@@ -20,10 +20,7 @@ get_header();
             <?php
             // Show the selected front page content.
             if (have_posts()) :
-                while (have_posts()) :
-                    the_post();
-                    get_template_part('template-parts/page/content', 'front-page');
-                endwhile;
+                get_template_part('template-parts/page/content', 'front-page');
             else :
                 get_template_part('template-parts/post/content', 'none');
             endif;
@@ -33,4 +30,5 @@ get_header();
     </div><!-- #main -->
 </div>
 
-<?php get_footer();
+<?php
+get_footer();
