@@ -693,3 +693,16 @@ function tn_custom_excerpt_length($length) {
 }
 
 add_filter('excerpt_length', 'tn_custom_excerpt_length', 999);
+
+// Add term page
+function pippin_taxonomy_add_new_meta_field() {
+	// this will add the custom meta field to the add new term page
+	?>
+	<div class="form-field">
+		<label for="term_meta[custom_term_meta]"><?php _e( 'Example meta field', 'pippin' ); ?></label>
+		<input type="text" name="term_meta[custom_term_meta]" id="term_meta[custom_term_meta]" value="">
+		<p class="description"><?php _e( 'Enter a value for this field','pippin' ); ?></p>
+	</div>
+<?php
+}
+add_action( 'category_add_form_fields', 'pippin_taxonomy_add_new_meta_field', 10, 2 );
