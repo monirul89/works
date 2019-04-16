@@ -20,7 +20,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         <script async="" src="https://www.google-analytics.com/analytics.js"></script>
-
+        <script src="<?php echo get_template_directory_uri(); ?>/assets/slider/gestures.js"></script>
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
@@ -102,7 +102,8 @@
                                 <li><a href="#">Contact</a></li>
                             </ul>-->
 
-                            <?php if (has_nav_menu('main-menu')):
+                            <?php
+                            if (has_nav_menu('main-menu')):
                                 wp_nav_menu(array(
                                     'theme_location' => 'main-menu',
                                     'container' => false,
@@ -121,7 +122,7 @@
                                 </ul>
 
                             <?php endif; ?>
-                                
+
                             <a href="javascript: void(0);" data-toggle="modal" data-target="#myModal2" class="get-appointment-btn"><span>Registration</span></a>
                             <a href="javascript: void(0);" data-toggle="modal" data-target="#myModalReg" class="get-appointment-btn"><span>Login</span></a>
                             <ul class="nav nav-pills header-social">
@@ -135,7 +136,10 @@
                 </div>
             </nav>
         </div>
-
-        <!--        <div class="">
-        <?php // include 'slider.php';  ?>
-                </div>-->
+        <div class="slider">
+            <?php if (is_home() || is_front_page()) { ?>
+                <div class="slider">
+                    <?php include_once 'template-parts/slider-full.php'; ?>
+                </div>
+            <?php } ?>
+        </div>
