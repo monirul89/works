@@ -52,6 +52,7 @@ function radixetcltd_setup() {
 
     add_image_size('radixetcltd-featured-image', 2000, 1200, true);
     add_image_size('radixetcltd-image', 350, 350, true);
+    add_image_size('radixetcltd-thumbnail-250', 400, 250, true);
     add_image_size('radixetcltd-thumbnail-avatar', 100, 100, true);
 
     // Set the default content width.
@@ -688,7 +689,7 @@ function wpdocs_excerpt_more($more) {
 add_filter('excerpt_more', 'wpdocs_excerpt_more');
 
 function tn_custom_excerpt_length($length) {
-    return 10;
+    return 14;
 }
 
 add_filter('excerpt_length', 'tn_custom_excerpt_length', 999);
