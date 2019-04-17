@@ -23,13 +23,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
     color: #f1eaea;
 }
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic-ext,latin-ext,cyrillic,greek-ext,greek,vietnamese);
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic-ext,latin-ext,cyrillic,greek-ext,greek,vietnamese);
 @font-face {
     font-family: "controls";
     src: url("controls.eot?cssslidertheme=demure");
     src: url("controls.eot#iefix?cssslidertheme=demure") format("embedded-opentype"), url("controls.woff?cssslidertheme=demure") format("woff"), url("controls.ttf?cssslidertheme=demure") format("truetype"), url("controls.svg#demure?cssslidertheme=demure") format("svg");
     font-weight: normal;
-    font-style: normal; }
+    font-style: normal; }*/
 html, body {
     margin: 0;
     padding: 0; }
