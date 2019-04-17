@@ -2409,3 +2409,21 @@ html, body {
     -o-transform: scale(1.2);
     transform: scale(1.2);
 }
+#commentform p label {
+    width: 100px;
+}
+.comment-form-comment label{
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: block;
+    float: left;
+}
+.submit {
+    background-color: #2875b1;
+    color: #ffffff;
+    border: 1px solid #2875b1;
+    margin-top: 10px;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
