@@ -2460,7 +2460,7 @@ svg.icon {
     right: 42px;
     padding: 8px 20px;
     border-radius: 15px;
-    display: none;
+    display: block;
 }
 #search-2 .search-form .search-submit:hover > .search-field {
  display: block !important;
