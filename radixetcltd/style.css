@@ -2427,3 +2427,44 @@ html, body {
     padding: 3px 10px;
     border-radius: 5px;
 }
+svg.icon {
+    width: 20px;
+}
+.icon-search {
+    height: 25px;
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+.icon-mail-reply {
+    width: 20px;
+    height: 15px;
+}
+
+.search-submit {
+    background-color: transparent;
+    border: 0;
+    line-height: 27px;
+    height: 50px;
+    z-index: 1;
+    float: right;
+    width: 40px;
+    position: relative;
+}
+
+.search-field {
+    background-color: transparent;
+    border: 1px solid #cdcdcd;
+    position: absolute;
+    top: 10px;
+    right: 42px;
+    padding: 8px 20px;
+    border-radius: 15px;
+    display: none;
+}
+#search-2 .search-form .search-submit:hover > .search-field {
+ display: block !important;
+}
+.screen-reader-text{
+    display: none;
+}
