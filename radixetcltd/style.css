@@ -2445,11 +2445,11 @@ svg.icon {
     background-color: transparent;
     border: 0;
     line-height: 27px;
-    height: 50px;
-    z-index: 1;
+    height: 20px;
     float: right;
     width: 28px;
     position: relative;
+    top: -20px;
 }
 
 .search-field {
@@ -2463,8 +2463,22 @@ svg.icon {
     display: block;
 }
 #search-2 .search-form .search-submit:hover > .search-field {
- display: block !important;
+    /*display: block !important;*/
 }
 .screen-reader-text{
     display: none;
 }
+#search-2 {
+    background: url(./assets/images/search-icon.png) 100% 20px;
+    background-repeat: no-repeat;
+    background-size: 22px;
+    height: 50px;
+    width: 22px;
+    float: right;
+}
+.search-form{
+    display: none;
+}/*
+#search-2:hover .search-form{
+    display: block;
+}*/
