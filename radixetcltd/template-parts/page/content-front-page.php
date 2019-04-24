@@ -31,12 +31,19 @@
                             <div class="content-post">
                                 <!--<a class="post-thumbnail home-post-thum" href="<?php // the_permalink();    ?>" aria-hidden="true"></a>-->
                                 <h3 class="title"><?php the_title(); ?></h3> 
-                                
+                                <p><strong>Model : <?php the_field('product_model'); ?></strong></p>
                                 <p>
-                                    <strong>Model : <?php the_field('product_model'); ?></strong><br>
+                                <del>
+                                    <?php 
+                                    $product_val = the_field('product_price_before');
+                                    echo '<span>price:</span>';
+                                        ?>
                                     
-                                    <strong>Price : </strong><del><?php the_field('product_price_before'); ?> Tk/-</del>
-                                    <strong><?php the_field('product_price'); ?> Tk/-</strong>
+                                    <?php  ?>
+                                </del>
+                                </p>
+                                <p><strong>Price : </strong>
+                                    <strong><?php the_field('product_price'); ?> /-</strong>
                                 </p>
                                 <p><?php the_excerpt(); ?></p>
                                 <!--<p><a class="post-thumbnail home-post-thum" href="<?php //the_permalink();    ?>" aria-hidden="true">Read more</a></p>-->
