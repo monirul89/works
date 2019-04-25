@@ -2509,6 +2509,9 @@ svg.icon {
 .widget-area section ul li a{
     color: #525252;
 }
+#comments {
+    float: right;
+}
 .nav-links {
     clear: both;
     overflow: hidden;

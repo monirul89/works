@@ -20,23 +20,39 @@ get_header();
                     <?php get_sidebar(); ?>
                 </div>
                 <div class="col-sm-9">
-                    <?php
-                    /* Start the Loop */
-                    while (have_posts()) :
-                        the_post();
-                        get_template_part('template-parts/post/content', get_post_format());
-                        // If comments are open or we have at least one comment, load up the comment template.
-                        if (comments_open() || get_comments_number()) :
-                            comments_template();
-                        endif;
-                    the_post_navigation(
-                            array(
-                                'prev_text' => '<span class="screen-reader-text">' . __('Previous Post', 'radixetcltd') . '</span><span aria-hidden="true" class="nav-subtitle">' . __('Previous', 'radixetcltd') . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . radixetcltd_get_svg(array('icon' => 'arrow-left')) . '</span>%title</span>',
-                                'next_text' => '<span class="screen-reader-text">' . __('Next Post', 'radixetcltd') . '</span><span aria-hidden="true" class="nav-subtitle">' . __('Next', 'radixetcltd') . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . radixetcltd_get_svg(array('icon' => 'arrow-right')) . '</span></span>',
-                            )
-                    );
-                    endwhile; // End of the loop.
-                    ?>
+                    <?php while (have_posts()) : ?>
+                        <div class="col-sm-4">
+                            <?php
+                            $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+                            /* link thumbnail to full size image for use with lightbox*/
+                            echo '<a href="'.esc_url($featured_img_url).'" rel="lightbox">'; 
+                                the_post_thumbnail('thumbnail');
+                                echo '</a>';?>
+                        </div>
+                        <div class="col-sm-8">
+                            <?php
+                            /* Start the Loop */
+                            the_post();
+                            get_template_part('template-parts/post/content', get_post_format());
+                            ?>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1">
+                                <?php
+                                if (comments_open() || get_comments_number()) :
+                                    comments_template();
+                                endif;
+
+                                the_post_navigation(
+                                        array(
+                                            'prev_text' => '<span class="screen-reader-text">' . __('Previous Post', 'radixetcltd') . '</span><span aria-hidden="true" class="nav-subtitle">' . __('Previous', 'radixetcltd') . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . radixetcltd_get_svg(array('icon' => 'arrow-left')) . '</span>%title</span>',
+                                            'next_text' => '<span class="screen-reader-text">' . __('Next Post', 'radixetcltd') . '</span><span aria-hidden="true" class="nav-subtitle">' . __('Next', 'radixetcltd') . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . radixetcltd_get_svg(array('icon' => 'arrow-right')) . '</span></span>',
+                                        )
+                                );
+                                ?>
+                            </div>
+                        </div>
+                    <?php endwhile; // End of the loop.   ?>
                 </div>
             </div>
         </main><!-- #main -->
