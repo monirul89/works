@@ -14,7 +14,7 @@
 get_header();
 ?>
 
-<div class="main-container">       
+<div class="wrap">     
     <div class="container">            
         <div class="row"> 
             <?php

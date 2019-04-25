@@ -2370,14 +2370,13 @@ html, body {
 
 /*# sourceMappingURL=style.css.map */
 .wrap {
-    padding-top: 50px;
+    padding-top: 85px;
 }
 .entry-header {
-    padding-top: 30px;
+    padding-top: 0px;
 }
 .entry-header h1 {
     margin: 0;
-    line-height: 50px;
 }
 .entry-meta {
     padding-bottom: 20px;
@@ -2478,7 +2477,39 @@ svg.icon {
 }
 .search-form{
     display: none;
-}/*
-#search-2:hover .search-form{
+}
+.product_selling_information p {
+    margin: 0;
+    padding: 0;
+}
+.widget-area section {
     display: block;
-}*/
+    width: 100% !important;
+    clear: both;
+    padding:0 0 20px 30px;
+}
+.widget-area section h2{
+    border-bottom: 2px solid #266fac33;
+    font-size: 18px;
+    padding: 0 0 10px 0;
+    margin: 0;
+}
+.widget-area section ul{
+    padding: 0;
+    margin: 0;
+}
+.widget-area section ul li{
+    padding: 0;
+    margin: 0 0 0 15px;
+    border-bottom: 1px solid aliceblue;
+}
+.widget-area section ul li:last-child{
+    border-bottom: 0px solid aliceblue;
+}
+.widget-area section ul li a{
+    color: #525252;
+}
+.nav-previous {
+}
+.nav-next {
+}
