@@ -2486,7 +2486,7 @@ svg.icon {
     display: block;
     width: 100% !important;
     clear: both;
-    padding:0 0 20px 30px;
+    padding:0 0 20px 0px;
 }
 .widget-area section h2{
     border-bottom: 2px solid #266fac33;
@@ -2509,7 +2509,20 @@ svg.icon {
 .widget-area section ul li a{
     color: #525252;
 }
+.nav-links {
+    clear: both;
+    overflow: hidden;
+    margin-top: 25px;
+}
 .nav-previous {
+    float: left;
 }
 .nav-next {
+    float: right;
+}
+span.nav-title {
+    display: none;
+}
+span.nav-title-icon-wrapper {
+    display: none;
 }
