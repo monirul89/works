@@ -29,6 +29,7 @@
                                 <?php } ?>
                             </div>
                             <div class="content-post">
+<<<<<<< HEAD
                                 <!--<a class="post-thumbnail home-post-thum" href="<?php // the_permalink();             ?>" aria-hidden="true"></a>-->
                                 <h3 class="title"><?php the_title(); ?></h3>
                                 <div class="product_selling_information">
@@ -51,6 +52,24 @@
                                         <strong><?php the_field('product_price'); ?> /-</strong>
                                     </p>
                                 </div>
+=======
+                                <!--<a class="post-thumbnail home-post-thum" href="<?php // the_permalink();    ?>" aria-hidden="true"></a>-->
+                                <h3 class="title"><?php the_title(); ?></h3> 
+                                <p><strong>Model : <?php the_field('product_model'); ?></strong></p>
+                                <p>
+                                <del>
+                                    <?php 
+                                    $product_val = the_field('product_price_before');
+                                    echo '<span>price:</span>';
+                                        ?>
+                                    
+                                    <?php  ?>
+                                </del>
+                                </p>
+                                <p><strong>Price : </strong>
+                                    <strong><?php the_field('product_price'); ?> /-</strong>
+                                </p>
+>>>>>>> 04e243483c09ff7f418170d19df78ae85fbc3cfb
                                 <p><?php the_excerpt(); ?></p>
                                 <!--<p><a class="post-thumbnail home-post-thum" href="<?php //the_permalink();             ?>" aria-hidden="true">Read more</a></p>-->
                             </div>
