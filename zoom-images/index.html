@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="image-zoom.css">
 
-<div id="Nature" class="picture w3-display-container" style="display:none">
+<div id="Nature" class="picture w3-display-container" style="display:block">
   <img src="images/img_nature_wide.jpg" alt="Nature" style="width:100%">
   <span onclick="this.parentElement.style.display='none'" 
   class="w3-display-topright w3-button w3-transparent w3-text-white">&times;</span>
@@ -52,6 +52,7 @@
 </div>
 
 <script>
+
 function openImg(imgName) {
   var i, x;
   x = document.getElementsByClassName("picture");
