@@ -64,46 +64,59 @@ function m4_shortcode_register(){
     }
 }
 
+// add_action('init', 'taxonomy_init_invoke' );
 
-
-// function m4_custom_taxonomy() {
-
-//     $labels = array(
-//         'name' => 'Item Category',
-//         'singular_name' => 'Item Category',
-//         'all_items' => 'All Category',
-//         'add_new_item' => 'Add New Category',
-//         'new_item_name' => 'New Category Name',
-//     );
-
-//     register_taxonomy('item_tax_post', 'item_custom_post', array(
-//         'label' => 'Item Category',
-//         'rewrite' => array('slug' => 'Item Category'),        
-//         'hierarchical' => true,
-//         'labels' => $labels,
-//         'taxonomies'=> array('category', 'post_tag'),
+//     function taxonomy_init_invoke(){
+//         register_taxonomy(
+//             'm4_tax', 
+//             'item_custom_post', 
+//             array(
+//                 'label' => __('Item Category'),
+//                 // 'rewrite' => array('slug' => 'genre'),        
+//                 'hierarchical' => true,
 //             )
-//     );
-//     $item_custom_tags = array(
-//         'name' => 'Item Tags',
-//         'singular_name' => 'Item Tag',
-//         'all_items' => 'All Item Tags',
-//         'parent_item' => null,
-//         'parent_item_colon' => null,
-//         'edit_item' => __('Edit Item Tag'),
-//         'update_item' => __('Update Item Tag'),
-//         'add_new_item' => __('Add New Item Tag'),
-//         'new_item_name' => __('New Item Tag Name'),
-//     );
+//         );
+//     }
 
-//     register_taxonomy('item_custom_post_tags', 'item_custom_post', array(
-//         'hierarchical' => false,
-//         'labels' => $item_custom_tags,
-//         'rewrite' => array('slug' => 'Item tags'),
-//     ));
-// }
 
-// add_action('init', 'm4_custom_taxonomy');
+function m4_custom_taxonomy() {
+
+    $labels = array(
+        'name' => 'Item Category',
+        'singular_name' => 'Item Category',
+        'all_items' => 'All Category',
+        'add_new_item' => 'Add New Category',
+        'new_item_name' => 'New Category Name',
+    );
+
+    register_taxonomy('item_tax_post', 'item_custom_post', array(
+        'label' => 'Item Category',
+        'rewrite' => array('slug' => 'Item Category'),        
+        'hierarchical' => true,
+        'labels' => $labels,
+        'taxonomies'=> array('category', 'post_tag'),
+            )
+    );
+    $item_custom_tags = array(
+        'name' => 'Item Tags',
+        'singular_name' => 'Item Tag',
+        'all_items' => 'All Item Tags',
+        'parent_item' => null,
+        'parent_item_colon' => null,
+        'edit_item' => __('Edit Item Tag'),
+        'update_item' => __('Update Item Tag'),
+        'add_new_item' => __('Add New Item Tag'),
+        'new_item_name' => __('New Item Tag Name'),
+    );
+
+    register_taxonomy('item_custom_post_tags', 'item_custom_post', array(
+        'hierarchical' => false,
+        'labels' => $item_custom_tags,
+        'rewrite' => array('slug' => 'Item tags'),
+    ));
+}
+
+add_action('init', 'm4_custom_taxonomy');
 
 
 // get data
