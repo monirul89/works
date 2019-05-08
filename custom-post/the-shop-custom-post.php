@@ -23,49 +23,91 @@ function m4_item_custom_post() {
             'add_new_item' => 'Add Item Post',
         ),
         'public' => true,
-        // 'taxonomies'=> array('category', 'post_tag'),
+        'taxonomies'=> array('category', 'post_tag'),
         'supports' => array('title', 'editor', 'custom-fields', 'post-formats', 'author', 'thumbnail', 'thumbnail', 'excerpt', 'comments'),
     ));
 }
 
 add_action('init', 'm4_item_custom_post');
 
-function m4_custom_taxonomy() {
+// add_shortcode( 'm4_item', 'm4_item_post' );
 
-    $labels = array(
-        'name' => 'Item Category',
-        'singular_name' => 'Item Category',
-        'all_items' => 'All Category',
-        'add_new_item' => 'Add New Category',
-        'new_item_name' => 'New Category Name',
-    );
-
-    register_taxonomy('item_tax_post', 'item_custom_post', array(
-        'label' => 'Item Category',
-        'rewrite' => array('slug' => 'Category'),
-        'hierarchical' => true,
-        'labels' => $labels
-            )
-    );
-    $item_custom_tags = array(
-        'name' => 'Item Tags',
-        'singular_name' => 'Item Tag',
-        'all_items' => 'All Item Tags',
-        'parent_item' => null,
-        'parent_item_colon' => null,
-        'edit_item' => __('Edit Item Tag'),
-        'update_item' => __('Update Item Tag'),
-        'add_new_item' => __('Add New Item Tag'),
-        'new_item_name' => __('New Item Tag Name'),
-    );
-
-    register_taxonomy('item_custom_post_tags', 'item_custom_post', array(
-        'hierarchical' => false,
-        'labels' => $item_custom_tags,
-        'rewrite' => array('slug' => 'Item tags'),
-    ));
+function m4_shortcode_init(){
+    add_shortcode( 'm4_item', 'm4_shortcode_register' );
 }
 
-add_action('init', 'm4_custom_taxonomy');
+add_action('init', 'm4_shortcode_init');
+
+function m4_shortcode_register(){
+        // get Item data
+    $args = array(
+        'post_type' => 'item_custom_post'
+    );
+
+    $itempostloop = new WP_Query($args);
+    if($itempostloop->have_posts()){
+
+        while($itempostloop->have_posts()){
+            $itempostloop->the_post();
+            ?>
+                <h3><?php the_title() ?></h3>
+                <?php the_post_thumbnail() ?>
+                <p><?php the_excerpt(); ?></p>
+            <?php
+        }
+        wp_reset_postdata();
+
+    }
+    else {
+        # code...
+        echo "Nothing found in this post type";
+    }
+}
+
+
+
+// function m4_custom_taxonomy() {
+
+//     $labels = array(
+//         'name' => 'Item Category',
+//         'singular_name' => 'Item Category',
+//         'all_items' => 'All Category',
+//         'add_new_item' => 'Add New Category',
+//         'new_item_name' => 'New Category Name',
+//     );
+
+//     register_taxonomy('item_tax_post', 'item_custom_post', array(
+//         'label' => 'Item Category',
+//         'rewrite' => array('slug' => 'Item Category'),        
+//         'hierarchical' => true,
+//         'labels' => $labels,
+//         'taxonomies'=> array('category', 'post_tag'),
+//             )
+//     );
+//     $item_custom_tags = array(
+//         'name' => 'Item Tags',
+//         'singular_name' => 'Item Tag',
+//         'all_items' => 'All Item Tags',
+//         'parent_item' => null,
+//         'parent_item_colon' => null,
+//         'edit_item' => __('Edit Item Tag'),
+//         'update_item' => __('Update Item Tag'),
+//         'add_new_item' => __('Add New Item Tag'),
+//         'new_item_name' => __('New Item Tag Name'),
+//     );
+
+//     register_taxonomy('item_custom_post_tags', 'item_custom_post', array(
+//         'hierarchical' => false,
+//         'labels' => $item_custom_tags,
+//         'rewrite' => array('slug' => 'Item tags'),
+//     ));
+// }
+
+// add_action('init', 'm4_custom_taxonomy');
+
+
+// get data
+
+
 
 
