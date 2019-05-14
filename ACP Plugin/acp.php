@@ -188,3 +188,7 @@ function m4_filter_item_by_taxonomies( $post_type, $which ) {
 
 }
 add_action( 'restrict_manage_posts', 'm4_filter_item_by_taxonomies' , 10, 2);
+
+
+// Admin page
+include_once('inc/acp-admin.php');
