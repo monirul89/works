@@ -16,7 +16,8 @@
 
 function m4_item_custom_post() {
     
-    register_post_type('item_custom_post', array(  // Custom post type Register
+    // Custom post type Register
+    register_post_type('item_custom_post', array(  
         'labels' => array(
             'name' => 'Items',
             'singular_name' => 'Item',
