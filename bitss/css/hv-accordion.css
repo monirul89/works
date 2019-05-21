@@ -1,0 +1,266 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 12, 2015, 4:11:42 PM
+    Author     : Anup
+*/
+
+ul.hv-accrodion{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    max-width: 100%;
+    clear: both;
+    display: none;
+    width: 100%;
+    position: relative;
+    float: left;
+   
+}
+ul.hv-accrodion > li{
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+ul.hv-accrodion > li.slide .inner-wrap{
+background-position: right center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+ul.horizontalAccordion{
+    height: 400px; 
+    overflow: hidden;
+}
+ul.horizontalAccordion > li.slide{
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 1px;
+    float: left;
+    margin: 0 0 0 -1px;
+    padding: 0;
+    vertical-align: top;   
+    display:block;
+
+    height: 400px;
+    width: 163px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    background: black;
+
+}
+ul.horizontalAccordion > li.slide:first-child{
+    margin-left: 0px; 
+}
+ul.horizontalAccordion > li.slide.active{
+    width: 654px;
+}
+ul.horizontalAccordion > li.slide .slide-title{
+    bottom: 0;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+    padding: 164px 0px;
+    position: absolute;
+    text-align: center;
+    top: 0; 
+    color:#fff;
+    max-width: 162px;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    opacity: 1;
+    background: rgba(255,0,0,.5);
+    z-index: 1;
+    cursor: pointer;
+}
+ul.horizontalAccordion > li.slide .slide-title:after{
+    border: 1px solid #fff;
+    border-radius: 100px;
+    bottom: 71px;    
+    height: 52px;
+    margin-right: -27px;
+    position: absolute;
+    right: 50%;
+    width: 52px;
+    font-family: 'bits-icon';
+    content: "\e610";
+    line-height: 50px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    font-size: 10px;    
+}
+ul.horizontalAccordion > li.slide .slide-title:hover:after{    
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+ul.horizontalAccordion > li.slide.active .slide-title{
+    opacity: 0;
+    z-index: 0;
+}
+ul.horizontalAccordion > li.slide .inner-wrap{   
+    padding: 20px;
+    padding: 50px 38px 59px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    background-color: #111419;
+}
+ul.horizontalAccordion > li.slide .inner-wrap .inner{
+    width: 275px;
+
+    opacity: 1;
+}
+ul.horizontalAccordion > li.slide .inner-wrap h2{
+    font-size: 42px;
+    padding: 0 0 20px;
+    margin: 0px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #FFF;
+}
+ul.horizontalAccordion > li.slide .inner-wrap{
+    opacity: 0;
+
+}
+ul.horizontalAccordion > li.slide.active .inner-wrap{
+    display: block!important;
+    opacity: 1;
+    -webkit-animation-delay: 2s; /* Chrome, Safari, Opera */
+    animation-delay: 2s;
+}
+ul.horizontalAccordion > li.slide .inner-wrap p{
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    color:#FFF;
+    text-align: justify;
+}
+ul.verticalAccordion > li.slide{
+    display: block;
+    overflow: hidden;
+}
+ul.verticalAccordion > li.slide .slide-title{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    line-height: 60px;
+    font-size: 19px;
+    padding: 0 90px 0px 28px;
+    color:#fff;
+    cursor: pointer;
+
+}
+ul.verticalAccordion > li.slide .slide-title:after{
+    border: 1px solid #fff;
+    border-radius: 100px;
+    top: 50%;    
+    height: 33px;
+    margin-top: -16px;
+    position: absolute;
+    right: 30px;
+    width: 33px;
+    font-family: 'bits-icon';
+    content: "\e610";
+    line-height: 30px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    font-size: 10px;
+    text-align: center;
+}
+ul.verticalAccordion > li.slide.active .slide-title:after{
+    content: "\e60e";
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+ul.verticalAccordion > li.slide .inner-wrap{    
+    opacity: 1;
+    background-color: #111419;    
+    display: none;
+}
+ul.verticalAccordion > li.slide.active .inner-wrap{ 
+
+}
+ul.verticalAccordion > li.slide .inner{
+    padding: 36px 28px;
+}
+ul.verticalAccordion > li.slide .inner h2{
+    padding: 0px;
+    margin: 0px;
+    display: none;
+}
+ul.verticalAccordion > li.slide .inner-wrap p{
+    color: #fff;
+    margin-bottom: 18px;
+    max-width: 80%;
+}
+ul#evl-featured > li.theme-111419 .slide-title{    
+    background: #0d0f12;
+    background-color: #111419;
+    background: -moz-linear-gradient(top,  #0d0f12 0%, #191d25 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0d0f12), color-stop(100%,#191d25));
+    background: -webkit-linear-gradient(top,  #0d0f12 0%,#191d25 100%);
+    background: -o-linear-gradient(top,  #0d0f12 0%,#191d25 100%);
+    background: -ms-linear-gradient(top,  #0d0f12 0%,#191d25 100%);
+    background: linear-gradient(to bottom,  #0d0f12 0%,#191d25 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d0f12', endColorstr='#191d25',GradientType=0 );
+}
+ul#evl-featured > li.theme-9c085e .slide-title{
+    background: #a51e6d;
+    background: -moz-linear-gradient(top,  #a51e6d 0%, #9a035b 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a51e6d), color-stop(100%,#9a035b));
+    background: -webkit-linear-gradient(top,  #a51e6d 0%,#9a035b 100%);
+    background: -o-linear-gradient(top,  #a51e6d 0%,#9a035b 100%);
+    background: -ms-linear-gradient(top,  #a51e6d 0%,#9a035b 100%);
+    background: linear-gradient(to bottom,  #a51e6d 0%,#9a035b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a51e6d', endColorstr='#9a035b',GradientType=0 );
+
+    background-color: #9c085e;
+
+}
+ul#evl-featured > li.theme-f5353a .slide-title{
+    background: #f23136;
+    background: -moz-linear-gradient(top,  #f23136 0%, #f23136 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f23136), color-stop(100%,#f23136));
+    background: -webkit-linear-gradient(top,  #f23136 0%,#f23136 100%);
+    background: -o-linear-gradient(top,  #f23136 0%,#f23136 100%);
+    background: -ms-linear-gradient(top,  #f23136 0%,#f23136 100%);
+    background: linear-gradient(to bottom,  #f23136 0%,#f23136 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f23136', endColorstr='#f23136',GradientType=0 );
+
+    background-color: #f5353a;
+}
+ul#evl-featured > li.theme-ff841e .slide-title{
+    background: #ff9829;
+    background: -moz-linear-gradient(top,  #ff9829 0%, #ff811c 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff9829), color-stop(100%,#ff811c));
+    background: -webkit-linear-gradient(top,  #ff9829 0%,#ff811c 100%);
+    background: -o-linear-gradient(top,  #ff9829 0%,#ff811c 100%);
+    background: -ms-linear-gradient(top,  #ff9829 0%,#ff811c 100%);
+    background: linear-gradient(to bottom,  #ff9829 0%,#ff811c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9829', endColorstr='#ff811c',GradientType=0 );
+
+    background-color: #ff841e;
+}
