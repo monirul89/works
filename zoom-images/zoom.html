@@ -22,6 +22,7 @@
 }
 #myresult{
 	float:right;
+	//display:none;
 }
 .img-zoom-result {
   border: 1px solid #d4d4d4;
@@ -35,6 +36,7 @@ function imageZoom(imgID, resultID) {
   var img, lens, result, cx, cy;
   img = document.getElementById(imgID);
   result = document.getElementById(resultID);
+  result.style.display = 'none';
   /*create lens:*/
   lens = document.createElement("DIV");
   lens.setAttribute("class", "img-zoom-lens");
@@ -53,6 +55,7 @@ function imageZoom(imgID, resultID) {
   lens.addEventListener("touchmove", moveLens);
   img.addEventListener("touchmove", moveLens);
   function moveLens(e) {
+	result.style.display = 'block';
     var pos, x, y;
     /*prevent any other actions that may occur when moving over the image:*/
     e.preventDefault();
@@ -95,7 +98,6 @@ function imageZoom(imgID, resultID) {
 <p>Mouse over the image:</p>
 
 <div class="img-zoom-container">
-
       <img onmouseover="zoomImage()" onmouseout="zoomImageOut()" id="myimage" src="images/img_girl.jpg" class="myimage1" width="300" height="240" />
       <div id="myresult" class="img-zoom-result"></div>
 </div>
