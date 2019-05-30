@@ -32,34 +32,39 @@ get_header();
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
             <div class="container">
-                <?php
-                if (have_posts()) :
+                <div class="col-sm-9">
+                    <?php
+                    if (have_posts()) :
 
-                    /* Start the Loop */
-                    while (have_posts()) :
-                        the_post();
-                        get_template_part('template-parts/post/content', get_post_format());
+                        /* Start the Loop */
+                        while (have_posts()) :
+                            the_post();
+                            get_template_part('template-parts/post/content', get_post_format());
 
-                    endwhile;
+                        endwhile;
 
-                    the_posts_pagination(
-                            array(
-                                'prev_text' => radixetcltd_get_svg(array('icon' => 'arrow-left')) . '<span class="screen-reader-text">' . __('Previous page', 'radixetcltd') . '</span>',
-                                'next_text' => '<span class="screen-reader-text">' . __('Next page', 'radixetcltd') . '</span>' . radixetcltd_get_svg(array('icon' => 'arrow-right')),
-                                'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'radixetcltd') . ' </span>',
-                            )
-                    );
+                        the_posts_pagination(
+                                array(
+                                    'prev_text' => radixetcltd_get_svg(array('icon' => 'arrow-left')) . '<span class="screen-reader-text">' . __('Previous page', 'radixetcltd') . '</span>',
+                                    'next_text' => '<span class="screen-reader-text">' . __('Next page', 'radixetcltd') . '</span>' . radixetcltd_get_svg(array('icon' => 'arrow-right')),
+                                    'before_page_number' => '<span class="meta-nav screen-reader-text">' . __('Page', 'radixetcltd') . ' </span>',
+                                )
+                        );
 
-                else :
+                    else :
 
-                    get_template_part('template-parts/post/content', 'none');
+                        get_template_part('template-parts/post/content', 'none');
 
-                endif;
-                ?>
+                    endif;
+                    ?>
+                </div>
+                <div class="col-sm-3">
+                    <?php get_sidebar(); ?>
+                </div>
             </div>
         </main><!-- #main -->
     </div><!-- #primary -->
-    <?php get_sidebar(); ?>
+
 </div><!-- .wrap -->
 
 <?php

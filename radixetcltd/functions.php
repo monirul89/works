@@ -437,12 +437,15 @@ add_action('wp_head', 'radixetcltd_colors_css_wrap');
  * Enqueues scripts and styles.
  */
 function radixetcltd_scripts() {
+    wp_enqueue_style('radixetcltd-style', get_stylesheet_uri());
     // Add custom fonts, used in the main stylesheet.
     wp_enqueue_style('radixetcltd-fonts', radixetcltd_fonts_url(), array(), null);
-
+    // Theme stylesheet.
+    
     // Theme block stylesheet.
     wp_enqueue_style('radixetcltd-bootstrap-min', get_theme_file_uri('/assets/css/bootstrap.min.css'), array('radixetcltd-style'), 'v3.3.5');
-    // Theme block stylesheet.
+       
+// Theme block stylesheet.
     wp_enqueue_style('radixetcltd-bootstrap-theme-min', get_theme_file_uri('/assets/css/bootstrap-theme.min.css'), array('radixetcltd-style'), 'v3.3.5');
     // Theme block stylesheet.
     wp_enqueue_style('radixetcltd-animate-style', get_theme_file_uri('/assets/css/animate.css'), array('radixetcltd-style'), '3.5.1');
@@ -450,9 +453,10 @@ function radixetcltd_scripts() {
     wp_enqueue_style('radixetcltd-custom-style', get_theme_file_uri('/assets/css/custom-style.css'), array('radixetcltd-style'), '0.0.1');
     // Theme block stylesheet.
     wp_enqueue_style('radixetcltd-block-style', get_theme_file_uri('/assets/css/blocks.css'), array('radixetcltd-style'), '1.1');
+    
+    wp_enqueue_style('radixetcltd-block-style', get_theme_file_uri('/assets/css/blocks.css'), array('radixetcltd-style'), '1.1');
 
-    // Theme stylesheet.
-    wp_enqueue_style('radixetcltd-style', get_stylesheet_uri());
+    
 
     // Load the dark colorscheme.
     if ('dark' === get_theme_mod('colorscheme', 'light') || is_customize_preview()) {
@@ -501,6 +505,10 @@ function radixetcltd_scripts() {
     wp_enqueue_script('jquery-bootstrap.min-js', get_theme_file_uri('/assets/js/bootstrap.min.js'), array('jquery'), 'v3.3.5', true);
     wp_enqueue_script('jquery-theme', get_theme_file_uri('/assets/js/theme.js'), array('jquery'), '0.0.1', true);
     wp_enqueue_script('jquery-custom', get_theme_file_uri('/assets/js/custom.js'), array('jquery'), '0.0.1', true);
+//    zoom
+    wp_enqueue_script('jquery-xzoom.min', get_theme_file_uri('/assets/zoom/xzoom.min.js'), array('jquery'), '0.0.1', true);
+    wp_enqueue_script('jquery-xzoom', get_theme_file_uri('/assets/zoom/xzoom.js'), array('jquery'), '0.0.1', true);
+    wp_enqueue_script('jquery-setup', get_theme_file_uri('/assets/zoom/setup.js'), array('jquery'), '0.0.1', true);
 
 
     wp_localize_script('radixetcltd-skip-link-focus-fix', 'radixetcltdScreenReaderText', $radixetcltd_l10n);
@@ -508,9 +516,10 @@ function radixetcltd_scripts() {
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
+     
 }
 
-add_action('wp_enqueue_scripts', 'radixetcltd_scripts');
+add_action('wp_enqueue_scripts', 'radixetcltd_scripts', 99);
 
 /**
  * Enqueues styles for the block-based editor.

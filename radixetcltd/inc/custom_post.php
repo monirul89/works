@@ -8,7 +8,7 @@ function morderna_custom_post(){
         'name'=>'Gallery',
         'singular_name'=>'gallery',
         'add_new'=>'Add New'
-    ), 'supports'=>array('title','editor','thumbnail')
+    ), 'supports'=>array('title','thumbnail')
     ));
     
     register_post_type('real-product', array(
