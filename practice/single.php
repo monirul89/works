@@ -10,37 +10,40 @@
 </div>
 
 <!-- Featured Products -->
+<!-- Featured Products -->
 <div class="container">
-    <div class="col-sm-10">
-        <h1 class="text-center">World Class Products</h1>
-        <div class="row">
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="row">
 
-            <?php while (have_posts()): the_post(); ?>
-
-                <!-- Product 1 -->
-                <div class="col-sm-6 col-md-3">
-                    <div class="thumbnail featured-product">
-                        <a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-                        <div class="caption">
-                            <h3><?php the_title(); ?></h3>
-                            <p><?php echo wp_trim_words(get_the_content(), 10, FALSE); ?>
-                                <a class="readmore" href="<?php the_permalink(); ?>">Read more</a></p>
+                <?php while (have_posts()): the_post(); ?>
+                    <!-- Product 1 -->
+                    <div class="col-sm-12">
+                        <div class="">
+                            <h2 class="single_title"><?php the_title(); ?></h2>
+                            <p>[By: <?php the_author(); ?> <?php the_time('D d M Y g:i a'); ?>]</p>
+                            <?php the_post_thumbnail(); ?>
+                            <p><?php the_content(); ?></p>
                         </div>
                     </div>
-                </div>
 
-            <?php endwhile; ?>
+                <?php endwhile; ?>
 
+            </div>
         </div>
-    </div>
-    <div class="col-sm-2">
-        <div class="sidebar">
-            <?php get_sidebar(); ?>
+        <div class="col-sm-2">
+            <div class="row">
+                <div class="sidebar">
+                    <?php get_sidebar(); ?>
+                </div>
+            </div>
         </div>
     </div>
 </div><!-- /.container -->
 
-
+<div class="container">
+    <hr />
+</div><!-- /.container -->
 <!-- Heading -->
 <div class="container">
     <div class="row">
@@ -78,13 +81,26 @@
         </a>
     </div>
 </div><!-- /.container-fluid -->
-
 <div class="container text-center">
     <h1>Unparalleled Service</h1>
     <p class="">Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products without collateral.</p>
     <img class="img-responsive img-circle center-block" src="<?php echo get_template_directory_uri(); ?>/images/service.jpg" alt="">
 </div><!--/.container-->
 
+<div class="container">
+    <div class="row">
+        <h2 class="text-center">Find Us</h2>
+        <!-- Map -->
+        <div class="footer-map"></div>
+        <div class="col-sm-12 footer-info-item text-center">
+            <h2>Contact Us</h2>
+            <p class=""> 31 Spooner Street, Quahog, Rhode Island </p>
+
+            <p class=""><span class="glyphicon glyphicon-phone-alt"></span> +1(23) 456 7890<br>
+                info@example.com</p>
+        </div>
+    </div>
+</div>
 
 
 

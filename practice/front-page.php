@@ -11,34 +11,41 @@
 
 <!-- Featured Products -->
 <div class="container">
-    <div class="col-sm-10">
+    <div class="col-sm-12">
         <h1 class="text-center">World Class Products</h1>
         <div class="row">
 
-            <?php while (have_posts()): the_post(); ?>
+            <?php
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 4,
+                'order' => 'DSC'
+            );
+            $the_query = new WP_Query($args);
 
-                <!-- Product 1 -->
-                <div class="col-sm-6 col-md-3">
-                    <div class="thumbnail featured-product">
-                        <a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-                        <div class="caption">
-                            <h3><?php the_title(); ?></h3>
-                            <p><?php echo wp_trim_words(get_the_content(), 10, FALSE); ?>
-                                <a class="readmore" href="<?php the_permalink(); ?>">Read more</a></p>
+            if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
+                    ?>
+                    <!-- Product 1 -->
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail featured-product">
+                            <a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+                            <div class="caption">
+                                <h3><?php the_title(); ?></h3>
+                                <p><?php echo wp_trim_words(get_the_content(), 10, FALSE); ?>
+                                    <a class="readmore" href="<?php the_permalink(); ?>">Read more</a></p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            <?php endwhile; ?>
+                    <?php
+                endwhile;
+            endif;
+            ?>
 
-        </div>
-    </div>
-    <div class="col-sm-2">
-        <div class="sidebar">
-            <?php get_sidebar(); ?>
         </div>
     </div>
 </div><!-- /.container -->
+
 
 
 <!-- Heading -->
@@ -50,6 +57,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- Promos -->
 <div class="container-fluid">
