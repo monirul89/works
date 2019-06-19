@@ -34,8 +34,10 @@
         </div>
     </div>
     <div class="col-sm-2">
-        <div class="sidebar">
-            <?php get_sidebar(); ?>
+        <div class="row">
+            <div class="sidebar">
+                <?php get_sidebar(); ?>
+            </div>
         </div>
     </div>
 </div><!-- /.container -->

@@ -22,6 +22,29 @@ function pactice_support() {
     register_nav_menu('footer_menu', 'Footer Menu');
     
     the_post_thumbnail( 'medium_large' );
+    
+    
+    register_post_type('notice_board', array(
+                'public'    => TRUE,
+                'labels'    => array(
+                    'name'      => 'Notice Board',
+                    'all_items' => 'All Notice',
+                    'add_new'   => 'Add New Notice',
+                    'add_new_item'  => 'Add New Notice',
+                ),
+                'menu_icon'     => 'dashicons-align-none',
+                'supports'      => array('title','thumbnail', 'editor', 'custom-fields')
+    ));
+    
+    register_post_type('Softtechit-66', array(
+            'public'    => TRUE,
+            'labels'    =>array(
+                'name'      => 'SoftTech IT 66',
+                'all_items' => 'All Students',
+                'add_new'   => 'Add New Students'
+            ),
+            'menu_icon'     => get_template_directory_uri().'/images/1902265-20.png'
+    ));
 }
 
 add_action('init', 'pactice_support');

@@ -1,28 +1,17 @@
 <h3>Notice board</h3>
 <ul>
-    <li><span class="glyphicon glyphicon-ok"></span>
-        Proactively envisioned </li>
-
-    <li><span class="glyphicon glyphicon-ok"></span>
-        Proactively envisioned </li>
-
-    <li><span class="glyphicon glyphicon-ok"></span>
-        Proactively envisioned </li>
+    <?php 
+        
+        $notice = new WP_Query(array(
+            'post_type' => 'notice_board'
+        ));
     
-    <li><span class="glyphicon glyphicon-ok"></span>
-        Proactively envisioned </li>
+    ?>
     
-    <li><span class="glyphicon glyphicon-ok"></span>
-        Proactively envisioned </li>
+    <?php while ($notice->have_posts()): $notice->the_post(); ?>
     
-    <li><span class="glyphicon glyphicon-ok"></span>
-        Proactively envisioned </li>
+    <li><a href="#"><span class="glyphicon glyphicon-ok"></span> <?php the_title(); ?></a></li>
     
-    <li><span class="glyphicon glyphicon-ok"></span>
-        Proactively envisioned </li>
-    
-    <li><span class="glyphicon glyphicon-ok"></span>
-        Proactively envisioned </li>
-    
+    <?php endwhile; ?>
 </ul>
 
