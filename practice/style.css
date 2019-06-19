@@ -42,3 +42,9 @@ footer .small-print{
     margin: 0;
     color: #fff;
 }
+.single-content img {
+    max-width: 768px;
+}
+.img-circle {
+    max-width: 450px;
+}

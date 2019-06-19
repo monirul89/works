@@ -7,11 +7,6 @@
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
         <title><?php bloginfo('title'); ?></title>
-
-        <!-- Bootstrap Core CSS -->
-        <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet">
-        <link href="<?php echo get_template_directory_uri(); ?>/css/custom.css" rel="stylesheet">
-        
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>

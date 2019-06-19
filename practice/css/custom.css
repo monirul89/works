@@ -17,7 +17,7 @@ h6 {
 }
 
 .feature {
-    background: url('../images/light_bulb.jpg');
+    /*background: url('../images/light_bulb.jpg');*/
     background-position: top right;
     background-size: cover;
     background-color: #dd845a;
@@ -67,7 +67,7 @@ h6 {
     vertical-align: middle;
 }
 
-.item-1 {
+/*.item-1 {
     background: url('../images/mung_beans.jpg');
 }
 
@@ -77,7 +77,7 @@ h6 {
 
 .item-3 {
     background: url('../images/grapes.jpg');
-}
+}*/
 
 .item-1,
 .item-2,

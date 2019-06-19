@@ -52,10 +52,6 @@
 </footer>
 
 
-<!-- jQuery -->
-<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.11.3.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/ie10-viewport-bug-workaround.js"></script>
 
 
 <?php wp_footer(); ?>
