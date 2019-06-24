@@ -1,5 +1,8 @@
 <?php
 
+include 'opt/ReduxCore/framework.php';
+include 'opt/sample/config.php';
+
 require_once 'WPDocs_Walker_Nav.php';
 /*
  * To change this license header, choose License Headers in Project Properties.
