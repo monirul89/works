@@ -1,4 +1,4 @@
-
+<?php global $practice; ?>
 <!-- Footer -->
 <footer>
     <!-- Footer Links -->
@@ -45,7 +45,7 @@
     <div class="small-print">
         <div class="container">
             <p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
-            <p>Copyright &copy; mislamit.com 2019 </p>
+            <p><?php echo $practice['copy-right'];?></p>
         </div>
     </div>
 

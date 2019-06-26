@@ -7,6 +7,9 @@ Description: Practice ektu education institute. So you are well come. aghe asle 
 Tags: Practice, Education, Institute, education institute, All student are being admited again.one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 Text Domain: Practice
 **/
+body{
+    padding-top: 0px;
+}
 .sidebar ul {
     padding: 0;
     list-style-type: none;
@@ -47,4 +50,37 @@ footer .small-print{
 }
 .img-circle {
     max-width: 450px;
+}
+.search-404 .search-field {
+    border: 1px solid #dcdcdc;
+    padding: 2px 6px;
+}
+.search-404 .search-submit {
+    border: 2px solid #dcdcdc;
+    border-radius: 2px;
+}
+.navbar-fixed-top {
+    top: 40px;
+}
+.navbar-top{
+    line-height: 40px;
+    background-color: #000000ad;
+    color: white;
+}
+.social-links-menu {
+    list-style-type: none;
+    text-align: right;
+}
+.social-links-menu li{
+    display: inline-block;
+}
+.social-links-menu li a{
+    padding: 0 5px;
+    color: #ffffff;
+}
+.social-links-menu li a:hover{
+    color: #70f187;
+}
+.floatLeft{
+    float: left;
 }

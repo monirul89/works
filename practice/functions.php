@@ -113,7 +113,7 @@ function practice_file_enqueue_scripts(){
     wp_enqueue_style('custome-css', get_template_directory_uri().'/css/custom.css' );
     wp_enqueue_style('style', get_stylesheet_uri());
     
-    wp_enqueue_script('jQuery');
+//    wp_enqueue_script('jQuery');
     wp_enqueue_script('bootstrap', get_template_directory_uri().'/js/bootstrap.min.js');
     wp_enqueue_script('viewport', get_template_directory_uri().'/js/ie10-viewport-bug-workaround.js');
 }
